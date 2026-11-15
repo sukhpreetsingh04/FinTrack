@@ -38,7 +38,7 @@ public:
         fintrackErrorHandler fEH;
         fEH.setSpendingLimit(spending_limit, monthly_spending_limit);
 
-        cout << "\n✅ Profile " << user_name << " created! Ready to track expenses." << endl;
+        cout << "✅ Profile " << user_name << " created! Ready to track expenses." << endl;
     }
 };
 
