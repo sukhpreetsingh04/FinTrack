@@ -1,8 +1,10 @@
 #include <iostream>
 #include <string>
+#include <stdexcept>
 using namespace std;
 
-class FinTrack {
+class FinTrack
+{
 public:
     string user_name;
     string preferred_currency;
@@ -12,7 +14,8 @@ public:
     string spending_limit;
 
 public:
-    void Interface() {
+    void Interface()
+    {
         cout << "$ finTrack init " << endl;
         cout << endl;
 
@@ -36,12 +39,22 @@ public:
         cout << "> Set a monthly spending limit? (Press 'Q' to skip): ";
         cin >> spending_limit;
 
-        if (spending_limit == "q" || spending_limit == "Q") {
+        if (spending_limit == "q" || spending_limit == "Q")
+        {
             cout << "\nspending limit skipped!\n";
         }
-        else {
+        try
+        {
             monthly_spending_limit = stoi(spending_limit);
+            if (monthly_spending_limit < '0')
+            {
+                throw invalid_argument("Invalid amount! Please enter a positive number");
+            }
             cout << "> Monthly spending limit set to: " << monthly_spending_limit << endl;
+        }
+        catch (const invalid_argument &e)
+        {
+            cerr << "Error: " << e.what() << endl;
         }
 
         cout << endl;
@@ -50,7 +63,8 @@ public:
     }
 };
 
-int main() {
+int main()
+{
     FinTrack Fnt;
     Fnt.Interface();
 }
