@@ -29,11 +29,12 @@ public:
         cout << "> Enter Primary account name: ";
         getline(cin, primary_account_name);
 
-        cout << "> Current balance for " << primary_account_name << ": ";
+        cout << "> Current balance for " << primary_account_name << " account : ";
         cin >> current_balance;
+        cin.ignore();
 
         cout << "> Set a monthly spending limit? (Press 'Q' to skip): ";
-        cin >> spending_limit;
+        getline(cin, spending_limit);
 
         fintrackErrorHandler fEH;
         fEH.setSpendingLimit(spending_limit, monthly_spending_limit);
