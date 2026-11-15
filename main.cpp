@@ -3,6 +3,6 @@ using namespace std;
 
 int main()
 {
-    userInterfaceFintrack uIF;
-    uIF.userInterface();
+    FinTrackInterface FTI;
+    FTI.userInterface();
 }
