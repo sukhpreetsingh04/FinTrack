@@ -7,7 +7,8 @@
 	},
 	"features": {
 		"ghcr.io/postfinance/devcontainer-features/git-lfs:1": {}
-	}
+	},
+	"postCreateCommand": "sudo apt update && sudo apt install -y libsqlite3-dev"
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
