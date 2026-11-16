@@ -41,6 +41,13 @@ public:
 
         cout << "✅ Profile " << user_name << " created! Ready to track expenses." << endl;
     }
+
+    inline void FinTrackWindow()
+    {
+        cout << "\n ---------- FINTRACK ----------" << endl;
+        cout << " > Welcome, " << user_name << endl;
+        cout << " > Current Balance: " << current_balance << " " << preferred_currency << endl;
+    }
 };
 
 #endif

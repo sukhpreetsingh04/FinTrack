@@ -5,4 +5,5 @@ int main()
 {
     FinTrackInterface FTI;
     FTI.userInterface();
+    FTI.FinTrackWindow();
 }
